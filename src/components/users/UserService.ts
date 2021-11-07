@@ -1,7 +1,8 @@
 import axios from "axios";
 import { User } from "./User";
+import config from "../../config";
 
-const url = "http://localhost:4000/";
+const url = config.URL_API; 
 
 export const signup = async (user: User) => {
   return await axios.post(url + "signup", user);

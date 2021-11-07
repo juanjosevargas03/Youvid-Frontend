@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Video } from "./Video";
+import config from "../../config";
 
-const url = "http://localhost:4000/videos";
+const url = config.URL_API + "videos";
 
 export const getVideos = async () => {
   return await axios.get(url);
